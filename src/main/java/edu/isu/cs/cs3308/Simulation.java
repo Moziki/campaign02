@@ -2,6 +2,8 @@ package edu.isu.cs.cs3308;
 
 import edu.isu.cs.cs3308.structures.Queue;
 import edu.isu.cs.cs3308.structures.impl.LinkedQueue;
+import edu.isu.cs.cs3308.structures.impl.DoublyLinkedList;
+import edu.isu.cs.cs3308.structures.impl.Node;
 import java.util.Random;
 
 /**
@@ -16,6 +18,8 @@ public class Simulation {
     private int maxNumQueues;
     private Random r;
     private int numIterations = 50;
+    public DoublyLinkedList<LinkedQueue> lines;
+
     // You will probably need more fields
 
     /**
@@ -30,6 +34,11 @@ public class Simulation {
 
         this.maxNumQueues = maxNumQueues;
         r = new Random();
+
+        this.lines = new DoublyLinkedList<>();
+
+
+
     }
 
     /**
@@ -52,8 +61,64 @@ public class Simulation {
      * Executes the Simulation
      */
     public void runSimulation() {
-        throw new UnsupportedOperationException("Not yet implemented");
-    }
+        String printResults = "";
+        System.out.println("Arrival rate: " + this.arrivalRate);
+        int currentMaxLines = 1;
+        for (int queueLoop = 0; queueLoop < this.maxNumQueues; queueLoop++) {
+            int average;
+            for (int i = 0; i < currentMaxLines; i++) {
+                LinkedQueue<Integer> oneQueue = new LinkedQueue<>();
+                lines.addFirst(oneQueue);
+            }
+                    int totPeople = 0;
+                    int totWaittime = 0;
+                    for (int iterations = numIterations; iterations > 0; iterations--) {
+
+
+                    for (int minutes = 720; minutes >= 0; minutes--) {
+
+
+                        int curLine = lines.head.getNext().getElement().size();
+                        int people = getRandomNumPeople(this.arrivalRate);
+                        for (int person = people; person >= 0; person--) {
+                            Node<LinkedQueue> current = lines.head.getNext();
+                            Node<LinkedQueue> smallestLine = lines.head.getNext();
+                                for (int lineCheck = 0; lineCheck < currentMaxLines; lineCheck++) {
+                                    if (current.getElement().isEmpty()) {
+                                        smallestLine = current;
+                                    }
+                                    else {
+                                        if (current.getElement().size() < curLine) smallestLine = current;
+                                    }
+                                    current = current.getNext();
+                                }
+                                smallestLine.getElement().offer(0);
+                            }
+                        Node<LinkedQueue> current = lines.head.getNext();
+                        for (int leavingLine = currentMaxLines; leavingLine > 0; leavingLine--) {
+                            if (current.getElement().isEmpty()){}
+                            else { totPeople++; totWaittime += (int)current.getElement().poll(); }
+                            if (current.getElement().isEmpty()){}
+                            else { totPeople++; totWaittime += (int)current.getElement().poll(); }
+                            current = current.getNext();
+                        }
+
+                    }
+                        Node<LinkedQueue> current = lines.head.getNext();
+                    for (int x = 0; x < currentMaxLines; x++) {
+                        for (int y = 0; y < current.getElement().size(); y ++) {
+                            current.getElement().offer((int)current.getElement().poll() + 1);
+                        }
+                        current = current.getNext();
+                    }
+                    }
+                    average = totWaittime / totPeople;
+                    printResults += "Average wait time using " + currentMaxLines + " queue(s): " + average +"\r\n";
+
+                    currentMaxLines++;
+                }
+            System.out.println(printResults);
+            }
 
     /**
      * returns a number of people based on the provided average
