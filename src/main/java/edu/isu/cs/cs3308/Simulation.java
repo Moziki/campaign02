@@ -65,14 +65,17 @@ public class Simulation {
         System.out.println("Arrival rate: " + this.arrivalRate);
         int currentMaxLines = 1;
         for (int queueLoop = 0; queueLoop < this.maxNumQueues; queueLoop++) {
-            int average;
+            int average = 0;
+
+            for (int iterations = numIterations; iterations > 0; iterations--) {
+                int totPeople = 0;
+                int totWaittime = 0;
             for (int i = 0; i < currentMaxLines; i++) {
                 LinkedQueue<Integer> oneQueue = new LinkedQueue<>();
                 lines.addFirst(oneQueue);
             }
-                    int totPeople = 0;
-                    int totWaittime = 0;
-                    for (int iterations = numIterations; iterations > 0; iterations--) {
+
+
 
 
                     for (int minutes = 720; minutes >= 0; minutes--) {
@@ -97,22 +100,36 @@ public class Simulation {
                         Node<LinkedQueue> current = lines.head.getNext();
                         for (int leavingLine = currentMaxLines; leavingLine > 0; leavingLine--) {
                             if (current.getElement().isEmpty()){}
-                            else { totPeople++; totWaittime += (int)current.getElement().poll(); }
+                            else {
+                                totPeople++;
+                                totWaittime += (int)current.getElement().poll();
+                            }
                             if (current.getElement().isEmpty()){}
-                            else { totPeople++; totWaittime += (int)current.getElement().poll(); }
-                            current = current.getNext();
+                            else {
+                                totPeople++;
+                                totWaittime += ((int)current.getElement().poll()); }
+                                current = current.getNext();
+                        }
+                        Node<LinkedQueue> currentOne = lines.head.getNext();
+                        for (int x = 0; x < currentMaxLines; x++) {
+                            if (currentOne.getElement() == null || currentOne.getElement().isEmpty()){}
+                            else {
+                                for (int y = 0; y < currentOne.getElement().size(); y++) {
+                                    int single = (Integer) currentOne.getElement().poll();
+                                    single += 1;
+                                    currentOne.getElement().offer(single);
+
+                                }
+                            }
+                            currentOne = currentOne.getNext();
+
                         }
 
+            }
+                    average += totWaittime / totPeople;
                     }
-                        Node<LinkedQueue> current = lines.head.getNext();
-                    for (int x = 0; x < currentMaxLines; x++) {
-                        for (int y = 0; y < current.getElement().size(); y ++) {
-                            current.getElement().offer((int)current.getElement().poll() + 1);
-                        }
-                        current = current.getNext();
-                    }
-                    }
-                    average = totWaittime / totPeople;
+                    average = average / numIterations;
+
                     printResults += "Average wait time using " + currentMaxLines + " queue(s): " + average +"\r\n";
 
                     currentMaxLines++;

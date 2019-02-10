@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ca55a98-c329-45ef-af81-73f226d4c8b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/driver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/structures/impl/DoublyLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/structures/impl/LinkedQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/driver.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -61,10 +60,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/structures/Queue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-475">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/Simulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="117" column="37" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
+            <state relative-caret-position="85">
+              <caret line="100" column="77" lean-forward="true" selection-start-line="100" selection-start-column="77" selection-end-line="100" selection-end-column="77" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,10 +80,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/edu/isu/cs/cs3308/SimulationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
+            <state relative-caret-position="199">
               <caret line="79" selection-start-line="79" selection-end-line="79" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -87,8 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/driver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="250">
+              <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -96,9 +104,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/structures/impl/LinkedQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="175">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
+                <element signature="e#252#253#0" expanded="true" />
                 <element signature="e#286#287#0" expanded="true" />
                 <element signature="e#318#319#0" expanded="true" />
                 <element signature="e#355#356#0" expanded="true" />
@@ -110,10 +119,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/structures/impl/DoublyLinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="137" selection-start-line="137" selection-end-line="137" />
+            <state relative-caret-position="275">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3382#3383#0" expanded="true" />
                 <element signature="e#3409#3410#0" expanded="true" />
               </folding>
             </state>
@@ -142,6 +152,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>single</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -157,10 +172,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="x" value="861" />
+    <option name="y" value="450" />
+    <option name="width" value="1296" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -291,7 +306,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SimulationTest">
+  <component name="RunManager" selected="Application.driver">
     <configuration name="driver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.isu.cs.cs3308.driver" />
       <module name="campaign02.main" />
@@ -341,34 +356,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SimulationTest - 2019.02.09 at 17h 09m 56s.xml">
+    <history-entry file="SimulationTest - 2019.02.09 at 18h 26m 25s.xml">
       <configuration name="SimulationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimulationTest - 2019.02.09 at 17h 15m 51s.xml">
+    <history-entry file="SimulationTest - 2019.02.09 at 18h 26m 35s.xml">
       <configuration name="SimulationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimulationTest - 2019.02.09 at 17h 17m 26s.xml">
+    <history-entry file="SimulationTest - 2019.02.09 at 18h 26m 50s.xml">
       <configuration name="SimulationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimulationTest - 2019.02.09 at 17h 18m 20s.xml">
+    <history-entry file="SimulationTest - 2019.02.09 at 18h 27m 37s.xml">
       <configuration name="SimulationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimulationTest - 2019.02.09 at 17h 18m 55s.xml">
+    <history-entry file="SimulationTest - 2019.02.09 at 18h 28m 01s.xml">
       <configuration name="SimulationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimulationTest - 2019.02.09 at 17h 18m 59s.xml">
+    <history-entry file="SimulationTest - 2019.02.09 at 18h 29m 41s.xml">
       <configuration name="SimulationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimulationTest - 2019.02.09 at 17h 20m 45s.xml">
+    <history-entry file="SimulationTest - 2019.02.09 at 18h 35m 07s.xml">
       <configuration name="SimulationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimulationTest - 2019.02.09 at 17h 33m 34s.xml">
+    <history-entry file="SimulationTest - 2019.02.09 at 18h 36m 28s.xml">
       <configuration name="SimulationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimulationTest - 2019.02.09 at 17h 33m 39s.xml">
+    <history-entry file="SimulationTest - 2019.02.09 at 18h 38m 23s.xml">
       <configuration name="SimulationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SimulationTest - 2019.02.09 at 17h 40m 54s.xml">
+    <history-entry file="SimulationTest - 2019.02.09 at 18h 38m 48s.xml">
       <configuration name="SimulationTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -383,7 +398,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -442,9 +456,9 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/Simulation.java</url>
-          <line>115</line>
+          <line>69</line>
           <properties />
-          <option name="timeStamp" value="8" />
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -454,6 +468,9 @@
         <watch expression="current" />
         <watch expression="smallestLine.getElement()" />
         <watch expression="System.out.println(&quot;Average wait time using &quot; + currentMaxLines + &quot;queue(s): &quot; + average)" language="JAVA" />
+        <watch expression="people" />
+        <watch expression="single" />
+        <watch expression="current.element.data.head" />
       </configuration>
     </watches-manager>
   </component>
@@ -467,13 +484,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/structures/Queue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/structures/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -532,36 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/structures/impl/DoublyLinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3409#3410#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/structures/impl/LinkedQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#355#356#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/structures/impl/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -573,27 +553,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/driver.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/structures/Queue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="-475">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/Simulation.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="117" column="37" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
+        <state relative-caret-position="300">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/structures/impl/LinkedQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#252#253#0" expanded="true" />
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#318#319#0" expanded="true" />
+            <element signature="e#355#356#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/structures/impl/DoublyLinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3382#3383#0" expanded="true" />
+            <element signature="e#3409#3410#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/edu/isu/cs/cs3308/SimulationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
+        <state relative-caret-position="199">
           <caret line="79" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/isu/cs/cs3308/Simulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="100" column="77" lean-forward="true" selection-start-line="100" selection-start-column="77" selection-end-line="100" selection-end-column="77" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

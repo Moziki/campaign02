@@ -8,7 +8,7 @@ public class driver {
         Simulation fixture;
 
 
-        fixture = new Simulation(18, 10, 1, 1024);
+        fixture = new Simulation(18, 10, 50, 1024);
         fixture.runSimulation();
     }
 }
