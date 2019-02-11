@@ -10,7 +10,7 @@ import java.util.Random;
  * Class representing a wait time simulation program.
  *
  * @author Isaac Griffith
- * @author
+ * @author Dan Walker
  */
 public class Simulation {
 
@@ -63,79 +63,83 @@ public class Simulation {
     public void runSimulation() {
         String printResults = "";
         System.out.println("Arrival rate: " + this.arrivalRate);
-        int currentMaxLines = 1;
+        int currentMaxLines = 1; //count of how many lines are open on the current loop
+        //outer most loop. number of lines open currently
         for (int queueLoop = 0; queueLoop < this.maxNumQueues; queueLoop++) {
             int average = 0;
-
+            //repeats the test to the desired number of iterations
             for (int iterations = numIterations; iterations > 0; iterations--) {
                 int totPeople = 0;
                 int totWaittime = 0;
+                //creating the lines, put here to ensure each iteration started
+                //with empty lines
             for (int i = 0; i < currentMaxLines; i++) {
                 LinkedQueue<Integer> oneQueue = new LinkedQueue<>();
                 lines.addFirst(oneQueue);
             }
+                //loop that controls every minute
+                for (int minutes = 720; minutes >= 0; minutes--) {
 
-
-
-
-                    for (int minutes = 720; minutes >= 0; minutes--) {
-
-
-                        int curLine = lines.head.getNext().getElement().size();
-                        int people = getRandomNumPeople(this.arrivalRate);
-                        for (int person = people; person >= 0; person--) {
-                            Node<LinkedQueue> current = lines.head.getNext();
-                            Node<LinkedQueue> smallestLine = lines.head.getNext();
-                                for (int lineCheck = 0; lineCheck < currentMaxLines; lineCheck++) {
-                                    if (current.getElement().isEmpty()) {
-                                        smallestLine = current;
-                                    }
-                                    else {
-                                        if (current.getElement().size() < curLine) smallestLine = current;
-                                    }
-                                    current = current.getNext();
-                                }
-                                smallestLine.getElement().offer(0);
-                            }
+                    int curLine = lines.head.getNext().getElement().size();
+                    int people = getRandomNumPeople(this.arrivalRate);
+                    //loop for each person arriving in the minute
+                    for (int person = people; person >= 0; person--) {
                         Node<LinkedQueue> current = lines.head.getNext();
-                        for (int leavingLine = currentMaxLines; leavingLine > 0; leavingLine--) {
-                            if (current.getElement().isEmpty()){}
-                            else {
-                                totPeople++;
-                                totWaittime += (int)current.getElement().poll();
+                        Node<LinkedQueue> smallestLine = lines.head.getNext();
+                        //loop will have each person go to the shortest lane
+                        for (int lineCheck = 0; lineCheck < currentMaxLines; lineCheck++) {
+                            if (current.getElement().isEmpty()) {
+                                smallestLine = current;
                             }
-                            if (current.getElement().isEmpty()){}
                             else {
-                                totPeople++;
-                                totWaittime += ((int)current.getElement().poll()); }
-                                current = current.getNext();
-                        }
-                        Node<LinkedQueue> currentOne = lines.head.getNext();
-                        for (int x = 0; x < currentMaxLines; x++) {
-                            if (currentOne.getElement() == null || currentOne.getElement().isEmpty()){}
-                            else {
-                                for (int y = 0; y < currentOne.getElement().size(); y++) {
-                                    int single = (Integer) currentOne.getElement().poll();
-                                    single += 1;
-                                    currentOne.getElement().offer(single);
-
-                                }
+                                if (current.getElement().size() < curLine) smallestLine = current;
                             }
-                            currentOne = currentOne.getNext();
-
+                            current = current.getNext();
                         }
-
-            }
-                    average += totWaittime / totPeople;
+                        smallestLine.getElement().offer(0);
                     }
-                    average = average / numIterations;
+                    Node<LinkedQueue> current = lines.head.getNext();
+                    //loop that takes two people out from each line (set before time is added)
+                    for (int leavingLine = currentMaxLines; leavingLine > 0; leavingLine--) {
+                        if (current.getElement().isEmpty()){}
+                        else {
+                            totPeople++;
+                            totWaittime += (int)current.getElement().poll();
+                        }
+                        if (current.getElement().isEmpty()){}
+                        else {
+                            totPeople++;
+                            totWaittime += ((int)current.getElement().poll());
+                        }
+                        current = current.getNext();
+                    }
+                    Node<LinkedQueue> currentOne = lines.head.getNext();
+                    //adds 1 to each person to indicate another minute of waiting
+                    for (int x = 0; x < currentMaxLines; x++) {
+                        if (currentOne.getElement() == null || currentOne.getElement().isEmpty()){}
+                        else {
+                            for (int y = 0; y < currentOne.getElement().size(); y++) {
+                                int single = (Integer) currentOne.getElement().poll();
+                                single += 1;
+                                currentOne.getElement().offer(single);
 
-                    printResults += "Average wait time using " + currentMaxLines + " queue(s): " + average +"\r\n";
-
-                    currentMaxLines++;
+                            }
+                        }
+                        currentOne = currentOne.getNext();
+                        }
                 }
-            System.out.println(printResults);
+                //takes average for this iteration and adds it to the total
+                average += totWaittime / totPeople;
             }
+            //all iterations averages in a lump sum is divided by the number of iterations
+            average = average / numIterations;
+            //prints the line for each number of lines open
+            printResults += "Average wait time using " + currentMaxLines + " queue(s): " + average +"\r\n";
+
+            currentMaxLines++;
+        }
+        System.out.println(printResults);
+    }
 
     /**
      * returns a number of people based on the provided average
